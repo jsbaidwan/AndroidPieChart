@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity implements OnChartValueSelec
         pieChart.setOnChartValueSelectedListener(this);
 
         pieChart.animateXY(1400, 1400);
+        dataSet.setSliceSpace(2);
 
     }
 
