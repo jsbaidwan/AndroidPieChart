@@ -50,6 +50,9 @@ public class MainActivity extends AppCompatActivity implements OnChartValueSelec
         pieChart.setData(data);
         pieChart.setDescription("This is Pie Chart");
 
+        // Disable the rotation of the pie chart
+        pieChart.setRotationEnabled(false);
+
         pieChart.setDrawHoleEnabled(false);
         pieChart.setTransparentCircleRadius(25f);
         pieChart.setHoleRadius(25f);
