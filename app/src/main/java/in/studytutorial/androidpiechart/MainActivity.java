@@ -31,10 +31,9 @@ public class MainActivity extends AppCompatActivity implements OnChartValueSelec
         ArrayList<Entry> yvalues = new ArrayList<Entry>();
         yvalues.add(new Entry(8f, 0));
         yvalues.add(new Entry(15f, 1));
-        yvalues.add(new Entry(12f, 2));
+        yvalues.add(new Entry(19f, 2));
         yvalues.add(new Entry(25f, 3));
-        yvalues.add(new Entry(23f, 4));
-        yvalues.add(new Entry(17f, 5));
+        yvalues.add(new Entry(33f, 4));
 
         PieDataSet dataSet = new PieDataSet(yvalues, "Election Results");
 
@@ -45,7 +44,6 @@ public class MainActivity extends AppCompatActivity implements OnChartValueSelec
         xVals.add("March");
         xVals.add("April");
         xVals.add("May");
-        xVals.add("June");
 
         PieData data = new PieData(xVals, dataSet);
         data.setValueFormatter(new PercentFormatter());
