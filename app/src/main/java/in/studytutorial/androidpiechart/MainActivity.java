@@ -29,10 +29,10 @@ public class MainActivity extends AppCompatActivity implements OnChartValueSelec
         // xIndex (even if from different DataSets), since no values can be
         // drawn above each other.
         ArrayList<Entry> yvalues = new ArrayList<Entry>();
-        yvalues.add(new Entry(8f, 0));
-        yvalues.add(new Entry(15f, 1));
-        yvalues.add(new Entry(19f, 2));
-        yvalues.add(new Entry(25f, 3));
+        yvalues.add(new Entry(1f, 0));
+        yvalues.add(new Entry(1f, 1));
+        yvalues.add(new Entry(27f, 2));
+        yvalues.add(new Entry(38f, 3));
         yvalues.add(new Entry(33f, 4));
 
         PieDataSet dataSet = new PieDataSet(yvalues, "Election Results");
@@ -60,7 +60,11 @@ public class MainActivity extends AppCompatActivity implements OnChartValueSelec
         pieChart.setOnChartValueSelectedListener(this);
 
         pieChart.animateXY(1400, 1400);
-        dataSet.setSliceSpace(2);
+        // white space between the slices
+        dataSet.setSliceSpace(2f);
+        // onClick the slices shift
+        dataSet.setSelectionShift(5f);
+
 
     }
 
