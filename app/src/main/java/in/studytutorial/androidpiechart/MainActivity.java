@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements OnChartValueSelec
         pieChart.setData(data);
         pieChart.setDescription("This is Pie Chart");
 
-        pieChart.setDrawHoleEnabled(true);
+        pieChart.setDrawHoleEnabled(false);
         pieChart.setTransparentCircleRadius(25f);
         pieChart.setHoleRadius(25f);
 
@@ -64,6 +64,9 @@ public class MainActivity extends AppCompatActivity implements OnChartValueSelec
         dataSet.setSliceSpace(2f);
         // onClick the slices shift
         dataSet.setSelectionShift(5f);
+        //
+        dataSet.setYValuePosition(PieDataSet.ValuePosition.OUTSIDE_SLICE);
+        dataSet.setXValuePosition(PieDataSet.ValuePosition.OUTSIDE_SLICE);
 
 
     }
